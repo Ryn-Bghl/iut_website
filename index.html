@@ -297,25 +297,39 @@
                         <br>
                         <p><span class="key">const</span> EMAIL = <span class="string">"communication.iutsf@u-pec.fr"</span>;</p>
                     </div>
-                    <form class="contact-form" onsubmit="event.preventDefault(); alert('Message envoyé au service communication !');">
-                        <div class="form-group">
-                            <input type="text" placeholder="var name = ?" required>
+                    <div class="contact-form">
+                        <div class="form-header">
+                            <span>contact.sh — Edited</span>
+                            <span>UTF-8</span>
                         </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="var email = ?" required>
-                        </div>
-                        <div class="form-group">
-                            <select style="width: 100%; padding: 10px; background: var(--bg-color); border: 1px solid var(--border-color); color: var(--text-primary);">
-                                <option>Target: Admission</option>
-                                <option>Target: Scolarité</option>
-                                <option>Target: Entreprise</option>
-                            </select>
-                        </div>
-                        <div class="form-group" style="margin-top: 15px;">
-                            <textarea placeholder="console.log(msg);" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn-code">EXECUTE_SEND()</button>
-                    </form>
+                        <form class="form-body" onsubmit="event.preventDefault(); alert('Message envoyé au service communication !');">
+                            <div class="form-group">
+                                <span class="line-number">1</span>
+                                <input type="text" placeholder="var name = 'Your Name';" required>
+                            </div>
+                            <div class="form-group">
+                                <span class="line-number">2</span>
+                                <input type="email" placeholder="var email = 'your@email.com';" required>
+                            </div>
+                            <div class="form-group">
+                                <span class="line-number">3</span>
+                                <select required>
+                                    <option value="" disabled selected>Target: Select Department</option>
+                                    <option>Admission / Parcoursup</option>
+                                    <option>Scolarité / Inscriptions</option>
+                                    <option>Relations Entreprises</option>
+                                    <option>Communication</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <span class="line-number">4</span>
+                                <textarea placeholder="console.log('Your message here...');" rows="5" required></textarea>
+                            </div>
+                            <div class="form-footer">
+                                <button type="submit" class="btn-execute">RUN_CONTACT_SH</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>

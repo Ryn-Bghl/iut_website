@@ -1,30 +1,27 @@
 /* Developer Theme Variables */
 :root {
     --bg-color: #0d1117;
-    /* GitHub Dimmed Dark */
-    --surface-color: #161b22;
-    /* Lighter surface */
-    --border-color: #30363d;
-    /* Subtle borders */
-    --text-primary: #c9d1d9;
-    /* Main text */
-    --text-secondary: #8b949e;
-    /* Comments/Subtitles */
 
-    /* Syntax Highlighting Colors */
+    --surface-color: #161b22;
+
+    --border-color: #30363d;
+
+    --text-primary: #c9d1d9;
+
+    --text-secondary: #8b949e;
+
     --accent-blue: #58a6ff;
-    /* Keywords */
+
     --accent-green: #238636;
-    /* Strings/Success */
+
     --accent-green-bright: #3fb950;
     --accent-purple: #bc8cff;
-    /* Functions */
-    --accent-orange: #f0883e;
-    /* Parameters */
-    --accent-red: #da3633;
-    /* Errors/Important */
 
-    --font-mono: 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
+    --accent-orange: #f0883e;
+
+    --accent-red: #da3633;
+
+    --font-mono: "Fira Code", "Consolas", "Monaco", "Courier New", monospace;
 
     --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     --glow: 0 0 10px rgba(88, 166, 255, 0.3);
@@ -44,7 +41,7 @@ body {
     background-color: var(--bg-color);
     color: var(--text-primary);
     font-family: var(--font-mono);
-    /* Global Monospace */
+
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -71,7 +68,7 @@ ul {
     padding: 0 15px;
 }
 
-/* --- Header / Navbar (IDE Tabs Style) --- */
+
 #header {
     position: fixed;
     top: 0;
@@ -93,13 +90,11 @@ ul {
 .logo img {
     height: 45px;
     filter: brightness(0) invert(1);
-    /* Ensure white logo */
 }
 
 .main-nav ul {
     display: flex;
     gap: 2px;
-    /* Gap for tab look */
 }
 
 .main-nav a {
@@ -111,7 +106,7 @@ ul {
 }
 
 .main-nav a::before {
-    content: '// ';
+    content: "// ";
     color: var(--border-color);
     transition: color 0.3s;
 }
@@ -135,17 +130,17 @@ ul {
     cursor: pointer;
 }
 
-/* --- Hero Section (Terminal Style) --- */
+
 #hero {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    background-image:
-        linear-gradient(rgba(13, 17, 23, 0.9), rgba(13, 17, 23, 0.95)),
-        url('https://source.unsplash.com/random/1920x1080/?code,programming');
-    /* Fallback/Overlay */
+    background-image: linear-gradient(rgba(13, 17, 23, 0.9),
+            rgba(13, 17, 23, 0.95)),
+        url("https://source.unsplash.com/random/1920x1080/?code,programming");
+
     background-size: cover;
     background-position: center;
 }
@@ -159,7 +154,11 @@ ul {
     left: 0;
     bottom: 0;
     right: 0;
-    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+        linear-gradient(90deg,
+            rgba(255, 0, 0, 0.06),
+            rgba(0, 255, 0, 0.02),
+            rgba(0, 0, 255, 0.06));
     z-index: 2;
     background-size: 100% 2px, 3px 100%;
     pointer-events: none;
@@ -236,7 +235,7 @@ ul {
     margin: 0;
     border-right: 2px solid var(--text-primary);
     white-space: normal;
-    /* Allow wrapping */
+
     animation: blink-caret 0.75s step-end infinite;
 }
 
@@ -244,7 +243,7 @@ ul {
 
     from,
     to {
-        border-color: transparent
+        border-color: transparent;
     }
 
     50% {
@@ -290,7 +289,7 @@ ul {
     text-shadow: none;
 }
 
-/* --- Sections General --- */
+
 .section {
     padding: 80px 0;
     border-top: 1px solid var(--border-color);
@@ -319,7 +318,7 @@ ul {
     margin-left: 5px;
 }
 
-/* --- Presentation (Split Layout) --- */
+
 .presentation-grid {
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
@@ -391,7 +390,7 @@ ul {
     font-weight: bold;
 }
 
-/* --- Formations (File Explorer Style) --- */
+
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -456,7 +455,6 @@ ul {
     text-decoration: none;
 }
 
-/* --- Admissions (Git Graph) --- */
 .git-graph {
     display: flex;
     flex-direction: column;
@@ -472,10 +470,9 @@ ul {
 }
 
 .commit-node::before {
-    content: '';
+    content: "";
     position: absolute;
     left: -37px;
-    /* Line width 2px + padding 30px + half dot 6px approx */
     top: 5px;
     width: 12px;
     height: 12px;
@@ -511,7 +508,12 @@ ul {
     padding: 12px 25px;
     font-family: var(--font-mono);
     cursor: pointer;
-    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+    clip-path: polygon(10px 0,
+            100% 0,
+            100% calc(100% - 10px),
+            calc(100% - 10px) 100%,
+            0 100%,
+            0 10px);
     transition: all 0.3s;
 }
 
@@ -521,7 +523,6 @@ ul {
     transform: scale(1.05);
 }
 
-/* --- Actualités (Log Output) --- */
 .logs-container {
     background-color: #000;
     border: 1px solid var(--border-color);
@@ -530,6 +531,7 @@ ul {
     font-size: 0.9rem;
     height: 400px;
     overflow-y: auto;
+    align-content: center;
 }
 
 .log-entry {
@@ -567,39 +569,133 @@ ul {
     text-decoration: underline;
 }
 
-/* --- Contact --- */
+
 .contact-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
 }
 
 .contact-info {
-    flex: 1;
-    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .contact-form {
-    flex: 1;
-    min-width: 300px;
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+}
+
+.form-header {
+    background-color: #010409;
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-body {
+    padding: 20px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 15px;
+    display: flex;
+}
+
+.line-number {
+    display: block;
+    width: 35px;
+    color: #484f58;
+    font-size: 0.85rem;
+    text-align: right;
+    padding-right: 15px;
+    user-select: none;
+    padding-top: 12px;
 }
 
 .form-group input,
 .form-group textarea,
 .form-group select {
-    background-color: var(--bg-color);
-    border: 1px solid var(--border-color);
-    color: var(--text-primary);
+    flex: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-left: 1px solid var(--border-color);
+    color: var(--accent-green-bright);
     font-family: var(--font-mono);
+    font-size: 0.95rem;
+    padding: 10px 15px;
+    width: 100%;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #484f58;
 }
 
 .form-group input:focus,
-.form-group textarea:focus {
+.form-group textarea:focus,
+.form-group select:focus {
+    background-color: #0d1117;
     border-color: var(--accent-blue);
-    box-shadow: 0 0 5px rgba(88, 166, 255, 0.2);
+    border-left-color: var(--accent-blue);
+    box-shadow: inset 0 0 10px rgba(88, 166, 255, 0.05);
 }
 
-/* --- Footer --- */
+.form-group select {
+    appearance: none;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%238b949e' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+}
+
+.form-group select option {
+    background-color: var(--surface-color);
+    color: var(--text-primary);
+}
+
+.form-footer {
+    padding: 0 20px 20px 55px;
+}
+
+.btn-execute {
+    background-color: transparent;
+    border: 1px solid var(--accent-green);
+    color: var(--accent-green);
+    padding: 8px 20px;
+    font-family: var(--font-mono);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-execute:hover {
+    background-color: var(--accent-green);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(35, 134, 54, 0.4);
+}
+
+.btn-execute::before {
+    content: "▶";
+    font-size: 0.7rem;
+}
+
+
 footer {
     background-color: #010409;
     border-top: 1px solid var(--border-color);
