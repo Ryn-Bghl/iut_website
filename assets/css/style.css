@@ -1,4 +1,3 @@
-/* Developer Theme Variables */
 :root {
     --bg-color: #0d1117;
 
@@ -15,6 +14,7 @@
     --accent-green: #238636;
 
     --accent-green-bright: #3fb950;
+
     --accent-purple: #bc8cff;
 
     --accent-orange: #f0883e;
@@ -24,6 +24,7 @@
     --font-mono: "Fira Code", "Consolas", "Monaco", "Courier New", monospace;
 
     --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+
     --glow: 0 0 10px rgba(88, 166, 255, 0.3);
 }
 
@@ -145,7 +146,7 @@ ul {
     background-position: center;
 }
 
-/* Scanline effect */
+
 #hero::after {
     content: " ";
     display: block;
@@ -704,7 +705,7 @@ footer {
     color: var(--text-secondary);
 }
 
-/* Scrollbar */
+
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -722,7 +723,7 @@ footer {
     background: var(--text-secondary);
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
     .presentation-grid {
         grid-template-columns: 1fr;

@@ -16,11 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (charIndex < textToType.length) {
       typingElement.textContent += textToType.charAt(charIndex);
       charIndex++;
-      setTimeout(typeWriter, 100); // Speed of typing
+      setTimeout(typeWriter, 100);
     }
   }
 
-  // Start typing after a short delay
   setTimeout(typeWriter, 500);
 
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -31,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const targetElement = document.querySelector(targetId);
 
       if (targetElement) {
-        // Close mobile menu if open
         nav.classList.remove("active");
 
         const headerOffset = 70;
