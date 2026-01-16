@@ -3,245 +3,284 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IUT Sénart Fontainebleau - Votre Avenir Commence Ici</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>IUT Sénart Fontainebleau - v2.0.26</title>
+    <!-- Google Fonts for Coding Aesthetic -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="assets/img/IUT_couleurs.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/img/IUT_blanc.svg">
 </head>
 <body>
+
+    <!-- Navbar -->
     <header id="header">
         <div class="container header-container">
             <a href="#" class="logo">
-                <img src="assets/img/IUT_couleurs.svg" alt="IUT Sénart Fontainebleau Logo">
+                <img src="assets/img/IUT_blanc.svg" alt="IUT Logo">
             </a>
-            <button class="mobile-menu-btn" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="mobile-menu-btn" aria-label="Toggle Terminal">
+                &gt;_
             </button>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="#presentation">Présentation</a></li>
-                    <li><a href="#formations">Formations</a></li>
-                    <li><a href="#admissions">Admissions</a></li>
-                    <li><a href="#actualites">Actualités</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#presentation">./presentation</a></li>
+                    <li><a href="#formations">./formations</a></li>
+                    <li><a href="#admissions">./admissions</a></li>
+                    <li><a href="#actualites">./news.log</a></li>
+                    <li><a href="#contact">./contact.sh</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section id="hero">
-            <div class="hero-overlay"></div>
-            <div class="container hero-content">
-                <h1 class="fade-in">Bienvenue à l'IUT Sénart Fontainebleau</h1>
-                <p class="fade-in delay-1">L'excellence universitaire au service de votre avenir professionnel.</p>
-                <a href="#formations" class="cta-button fade-in delay-2">Découvrir nos formations</a>
-            </div>
-            <div class="scroll-indicator">
-                <div class="mouse"></div>
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="dot red"></div>
+                    <div class="dot yellow"></div>
+                    <div class="dot green"></div>
+                    <span class="terminal-title">user@iut-sf:~/future</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="command-line">
+                        <span class="prompt">user@iut-sf</span>
+                        <span class="path">:~/future$</span>
+                        <div class="typewriter">
+                            <h1 id="typing-text"></h1>
+                        </div>
+                    </div>
+                    <div class="hero-subtext">
+                        <span class="const-keyword">const</span> <span class="variable">avenir</span> = <span class="string">"Assuré"</span>;
+                        <br>
+                        <span class="comment">// L'excellence universitaire au service de votre carrière.</span>
+                    </div>
+                    <div class="cta-container">
+                        <a href="#formations" class="btn-code">./start_career.sh</a>
+                    </div>
+                </div>
             </div>
         </section>
 
+        <!-- Presentation Section -->
         <section id="presentation" class="section">
             <div class="container">
-                <div class="section-title reveal-on-scroll">
-                    <h2>Notre IUT</h2>
-                    <div class="underline"></div>
+                <div class="section-title">
+                    <h2>Présentation</h2>
                 </div>
                 <div class="presentation-grid">
-                    <div class="presentation-text reveal-on-scroll">
-                        <p>Implanté sur deux sites géographiques, Sénart et Fontainebleau, notre IUT offre un cadre d'études privilégié et un accompagnement personnalisé vers la réussite.</p>
-                        <p>Composante de l'UPEC, nous allions exigence universitaire et professionnalisation pour former les talents de demain dans des secteurs d'avenir.</p>
-                        <div class="stats-grid">
-                            <div class="stat-item">
-                                <span class="stat-number">2000+</span>
-                                <span class="stat-label">Étudiants</span>
+                    <div class="text-content">
+                        <p class="comment">/* À propos de l'établissement */</p>
+                        <p>
+                            Implanté sur deux sites géographiques, <span class="key">Sénart</span> et <span class="key">Fontainebleau</span>, l'IUT offre un cadre d'études privilégié. Composante de l'UPEC, nous allions exigence universitaire et professionnalisation.
+                        </p>
+                        <div class="stats-container">
+                            <div class="stat-box">
+                                <span class="stat-num">2000+</span>
+                                <span>Étudiants</span>
                             </div>
-                            <div class="stat-item">
-                                <span class="stat-number">9</span>
-                                <span class="stat-label">Départements</span>
+                            <div class="stat-box">
+                                <span class="stat-num">9</span>
+                                <span>Départements</span>
                             </div>
-                            <div class="stat-item">
-                                <span class="stat-number">90%</span>
-                                <span class="stat-label">Insertion pro</span>
+                            <div class="stat-box">
+                                <span class="stat-num">90%</span>
+                                <span>Insertion</span>
                             </div>
                         </div>
                     </div>
-                    <div class="presentation-image reveal-on-scroll delay-1">
-                        <!-- Placeholder for a real campus image -->
-                        <div class="image-placeholder">Campus</div>
+                    <!-- Code Block Visualization -->
+                    <div class="code-block-display">
+                        <span class="code-line"><span class="key">university</span>: <span class="string">"UPEC"</span>,</span>
+                        <span class="code-line"><span class="key">locations</span>: [<span class="string">"Lieusaint"</span>, <span class="string">"Fontainebleau"</span>],</span>
+                        <span class="code-line"><span class="key">type</span>: <span class="string">"Technology_Institute"</span>,</span>
+                        <span class="code-line"><span class="key">focus</span>: [<span class="string">"Practice"</span>, <span class="string">"Theory"</span>],</span>
+                        <span class="code-line"><span class="key">isHiring</span>: <span class="value">true</span></span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="formations" class="section bg-light">
+        <!-- Formations Section -->
+        <section id="formations" class="section">
             <div class="container">
-                <div class="section-title reveal-on-scroll">
-                    <h2>Nos Formations</h2>
-                    <div class="underline"></div>
+                <div class="section-title">
+                    <h2>Formations_BUT</h2>
                 </div>
+                <p class="comment" style="margin-bottom: 30px;">// Bachelor Universitaire de Technologie (3 ans)</p>
                 <div class="cards-grid">
-                    <article class="card reveal-on-scroll">
-                        <div class="card-icon">💻</div>
+                    <!-- Cards using data fetched from UPEC site -->
+                    <article class="file-card">
+                        <div class="file-header">
+                            <span class="file-name">Info.js</span>
+                            <span class="file-ext">BUT</span>
+                        </div>
                         <h3>Informatique</h3>
-                        <p>Devenez expert en développement logiciel, web et bases de données.</p>
-                        <a href="#" class="card-link">En savoir plus &rarr;</a>
+                        <p class="file-desc">Développement d'applications, administration de bases de données, cybersécurité.</p>
+                        <a href="#" class="btn-sm">view_details()</a>
                     </article>
-                    <article class="card reveal-on-scroll delay-1">
-                        <div class="card-icon">🎨</div>
+
+                    <article class="file-card">
+                        <div class="file-header">
+                            <span class="file-name">MMI.css</span>
+                            <span class="file-ext">BUT</span>
+                        </div>
                         <h3>MMI</h3>
-                        <p>Métiers du Multimédia et de l'Internet : création web, design et communication.</p>
-                        <a href="#" class="card-link">En savoir plus &rarr;</a>
+                        <p class="file-desc">Métiers du Multimédia et de l'Internet : Web, Design, Communication digitale.</p>
+                        <a href="#" class="btn-sm">view_details()</a>
                     </article>
-                    <article class="card reveal-on-scroll delay-2">
-                        <div class="card-icon">⚡</div>
+
+                    <article class="file-card">
+                        <div class="file-header">
+                            <span class="file-name">GEII.cpp</span>
+                            <span class="file-ext">BUT</span>
+                        </div>
                         <h3>GEII</h3>
-                        <p>Génie Électrique et Informatique Industrielle : électronique et automatismes.</p>
-                        <a href="#" class="card-link">En savoir plus &rarr;</a>
+                        <p class="file-desc">Génie Électrique et Info Industrielle : Automatisme, Électronique, Énergie.</p>
+                        <a href="#" class="btn-sm">view_details()</a>
                     </article>
-                    <article class="card reveal-on-scroll">
-                        <div class="card-icon">💼</div>
+
+                    <article class="file-card">
+                        <div class="file-header">
+                            <span class="file-name">TC.json</span>
+                            <span class="file-ext">BUT</span>
+                        </div>
                         <h3>TC</h3>
-                        <p>Techniques de Commercialisation : vente, marketing et négociation.</p>
-                        <a href="#" class="card-link">En savoir plus &rarr;</a>
+                        <p class="file-desc">Techniques de Commercialisation : Marketing, Vente, Négociation.</p>
+                        <a href="#" class="btn-sm">view_details()</a>
                     </article>
-                    <article class="card reveal-on-scroll delay-1">
-                        <div class="card-icon">🏗️</div>
+
+                    <article class="file-card">
+                        <div class="file-header">
+                            <span class="file-name">GCCD.obj</span>
+                            <span class="file-ext">BUT</span>
+                        </div>
                         <h3>GCCD</h3>
-                        <p>Génie Civil - Construction Durable : bâtir le monde de demain.</p>
-                        <a href="#" class="card-link">En savoir plus &rarr;</a>
+                        <p class="file-desc">Génie Civil - Construction Durable : Bâtiment, Travaux Publics.</p>
+                        <a href="#" class="btn-sm">view_details()</a>
                     </article>
-                    <article class="card reveal-on-scroll delay-2">
-                        <div class="card-icon">📊</div>
+
+                    <article class="file-card">
+                        <div class="file-header">
+                            <span class="file-name">GEA.xlsx</span>
+                            <span class="file-ext">BUT</span>
+                        </div>
                         <h3>GEA</h3>
-                        <p>Gestion des Entreprises et des Administrations : finance et management.</p>
-                        <a href="#" class="card-link">En savoir plus &rarr;</a>
+                        <p class="file-desc">Gestion des Entreprises et Administrations : Compta, RH, Gestion.</p>
+                        <a href="#" class="btn-sm">view_details()</a>
                     </article>
                 </div>
             </div>
         </section>
 
+        <!-- Admissions Timeline (Git Graph) -->
         <section id="admissions" class="section">
             <div class="container">
-                <div class="section-title reveal-on-scroll">
-                    <h2>Admissions</h2>
-                    <div class="underline"></div>
+                <div class="section-title">
+                    <h2>Git_Log_Admissions</h2>
                 </div>
-                <div class="admissions-content reveal-on-scroll">
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-date">Janvier</div>
-                            <div class="timeline-content">Ouverture de Parcoursup</div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-date">Mars</div>
-                            <div class="timeline-content">Clôture des vœux</div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-date">Avril</div>
-                            <div class="timeline-content">Confirmation des vœux</div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-date">Juin</div>
-                            <div class="timeline-content">Résultats d'admission</div>
-                        </div>
+                <div class="git-graph">
+                    <div class="commit-node">
+                        <div class="commit-hash">a1b2c3d</div>
+                        <div class="commit-msg">feat: Ouverture Parcoursup</div>
+                        <div class="commit-date">Janvier 2026</div>
                     </div>
-                    <div class="cta-box">
-                        <h3>Prêt à candidater ?</h3>
-                        <p>Toutes les candidatures passent par la plateforme nationale Parcoursup.</p>
-                        <a href="https://www.parcoursup.fr/" target="_blank" class="cta-button primary-btn">Aller sur Parcoursup</a>
+                    <div class="commit-node">
+                        <div class="commit-hash">e4f5g6h</div>
+                        <div class="commit-msg">fix: Clôture des vœux</div>
+                        <div class="commit-date">Mars 2026</div>
+                    </div>
+                    <div class="commit-node">
+                        <div class="commit-hash">i7j8k9l</div>
+                        <div class="commit-msg">chore: Confirmation finale</div>
+                        <div class="commit-date">Avril 2026</div>
+                    </div>
+                    <div class="commit-node">
+                        <div class="commit-hash">m0n1o2p</div>
+                        <div class="commit-msg">release: Résultats Admission v1.0</div>
+                        <div class="commit-date">Juin 2026</div>
+                    </div>
+                </div>
+                <div style="margin-top: 20px;">
+                    <a href="https://www.parcoursup.fr/" target="_blank" class="parcoursup-btn">git push origin parcoursup --force</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Actualités (Logs) -->
+        <section id="actualites" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>System_Logs</h2>
+                </div>
+                <div class="logs-container">
+                    <!-- News 1 -->
+                    <div class="log-entry">
+                        <div class="log-meta">
+                            <span class="timestamp">[2026-01-15T09:00:00]</span>
+                            <span class="log-level">INFO</span>
+                        </div>
+                        <div class="log-message">Informations utiles pour bien préparer sa rentrée universitaire.</div>
+                        <a href="#" class="log-link">>> Read more</a>
+                    </div>
+                    <!-- News 2 -->
+                    <div class="log-entry">
+                        <div class="log-meta">
+                            <span class="timestamp">[2026-01-12T14:30:00]</span>
+                            <span class="log-level">WARN</span>
+                        </div>
+                        <div class="log-message">Amélioration continue de la formation : appel à collaboration avec les entreprises.</div>
+                        <a href="#" class="log-link">>> Read more</a>
+                    </div>
+                    <!-- News 3 -->
+                    <div class="log-entry">
+                        <div class="log-meta">
+                            <span class="timestamp">[2026-01-10T11:15:00]</span>
+                            <span class="log-level">SUCCESS</span>
+                        </div>
+                        <div class="log-message">Invitation culinaire : Journées du goût sur les campus. Venez participer !</div>
+                        <a href="#" class="log-link">>> Read more</a>
+                    </div>
+                    <!-- Static logs for aesthetic -->
+                    <div class="log-entry">
+                        <div class="log-meta">
+                            <span class="timestamp">[SYSTEM]</span>
+                            <span class="log-level">DEBUG</span>
+                        </div>
+                        <div class="log-message">Server uptime: 99.9%. Student satisfaction index loading...</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="actualites" class="section bg-light">
+        <!-- Contact Section -->
+        <section id="contact" class="section">
             <div class="container">
-                <div class="section-title reveal-on-scroll">
-                    <h2>Actualités</h2>
-                    <div class="underline"></div>
+                <div class="section-title">
+                    <h2>Contact_API</h2>
                 </div>
-                <div class="news-grid">
-                    <article class="news-card reveal-on-scroll">
-                        <div class="news-image"></div>
-                        <div class="news-content">
-                            <span class="news-date">15 Janvier 2026</span>
-                            <h3>Journée Portes Ouvertes</h3>
-                            <p>Venez découvrir nos locaux et échanger avec nos étudiants et enseignants le samedi 3 février.</p>
-                            <a href="#" class="read-more">Lire la suite</a>
-                        </div>
-                    </article>
-                    <article class="news-card reveal-on-scroll delay-1">
-                        <div class="news-image"></div>
-                        <div class="news-content">
-                            <span class="news-date">10 Janvier 2026</span>
-                            <h3>Hackathon MMI</h3>
-                            <p>Nos étudiants en MMI remportent le 1er prix du Hackathon national.</p>
-                            <a href="#" class="read-more">Lire la suite</a>
-                        </div>
-                    </article>
-                    <article class="news-card reveal-on-scroll delay-2">
-                        <div class="news-image"></div>
-                        <div class="news-content">
-                            <span class="news-date">05 Janvier 2026</span>
-                            <h3>Conférence Climat</h3>
-                            <p>Cycle de conférences sur le développement durable organisé par le département GCCD.</p>
-                            <a href="#" class="read-more">Lire la suite</a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section contact-section">
-            <div class="container">
-                <div class="section-title reveal-on-scroll">
-                    <h2>Contactez-nous</h2>
-                    <div class="underline"></div>
-                </div>
-                <div class="contact-grid">
-                    <div class="contact-info reveal-on-scroll">
-                        <div class="info-item">
-                            <h3>Site de Sénart</h3>
-                            <p>36-37 rue Georges Charpak<br>77567 Lieusaint Cedex</p>
-                        </div>
-                        <div class="info-item">
-                            <h3>Site de Fontainebleau</h3>
-                            <p>Route Hurtault<br>77300 Fontainebleau</p>
-                        </div>
-                        <div class="info-item">
-                            <h3>Email</h3>
-                            <p><a href="mailto:contact@iutsf.org">contact@iutsf.org</a></p>
-                        </div>
-                        <div class="info-item">
-                            <h3>Téléphone</h3>
-                            <p>01 64 13 44 88</p>
-                        </div>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <p class="comment">// Endpoints de communication</p>
+                        <br>
+                        <p><span class="key">const</span> address_senart = <span class="string">"36-37 rue Georges Charpak, 77567 Lieusaint"</span>;</p>
+                        <p><span class="key">const</span> address_fontainebleau = <span class="string">"Route Hurtault, 77300 Fontainebleau"</span>;</p>
+                        <p><span class="key">const</span> email = <span class="string">"contact@iutsf.org"</span>;</p>
+                        <p><span class="key">const</span> phone = <span class="string">"01 64 13 44 88"</span>;</p>
                     </div>
-                    <form class="contact-form reveal-on-scroll delay-1" onsubmit="event.preventDefault(); alert('Message envoyé ! (Simulation)');">
+                    <form class="contact-form" onsubmit="event.preventDefault(); alert('Request sent with status 200 OK');">
                         <div class="form-group">
-                            <input type="text" placeholder="Votre nom" required>
+                            <input type="text" placeholder="input.name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Votre email" required>
+                            <input type="email" placeholder="input.email" required>
                         </div>
                         <div class="form-group">
-                            <select>
-                                <option value="">Sujet de votre demande</option>
-                                <option value="admission">Admissions</option>
-                                <option value="formation">Formations</option>
-                                <option value="autre">Autre</option>
-                            </select>
+                            <textarea placeholder="console.log(your_message);" rows="5" required></textarea>
                         </div>
-                        <div class="form-group">
-                            <textarea placeholder="Votre message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="cta-button">Envoyer</button>
+                        <button type="submit" class="btn-code">SEND_REQUEST()</button>
                     </form>
                 </div>
             </div>
@@ -249,22 +288,9 @@
     </main>
 
     <footer>
-        <div class="container footer-container">
-            <div class="footer-logo">
-                <img src="assets/img/IUT_blanc.svg" alt="Logo IUT Blanc">
-            </div>
-            <div class="footer-links">
-                <a href="#">Mentions Légales</a>
-                <a href="#">Plan du site</a>
-                <a href="#">Intranet</a>
-            </div>
-            <div class="footer-social">
-                <a href="#" aria-label="Facebook">FB</a>
-                <a href="#" aria-label="Twitter">TW</a>
-                <a href="#" aria-label="Instagram">IG</a>
-                <a href="#" aria-label="LinkedIn">LI</a>
-            </div>
-            <p class="copyright">&copy; 2026 IUT Sénart Fontainebleau - UPEC. Tous droits réservés.</p>
+        <div class="container">
+            <p>Copyright (c) 2026 IUT Sénart Fontainebleau. All rights reserved.</p>
+            <p class="comment">// Made with <3 by a Developer for Developers</p>
         </div>
     </footer>
 

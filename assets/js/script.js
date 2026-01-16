@@ -1,67 +1,43 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobile Menu Toggle
+    // --- Mobile Menu Toggle ---
     const menuBtn = document.querySelector('.mobile-menu-btn');
     const nav = document.querySelector('.main-nav');
-    const header = document.querySelector('#header');
 
     if (menuBtn) {
         menuBtn.addEventListener('click', () => {
             nav.classList.toggle('active');
-            // Animate hamburger to X
-            const spans = menuBtn.querySelectorAll('span');
-            spans[0].style.transform = nav.classList.contains('active') ? 'rotate(45deg) translate(5px, 5px)' : 'none';
-            spans[1].style.opacity = nav.classList.contains('active') ? '0' : '1';
-            spans[2].style.transform = nav.classList.contains('active') ? 'rotate(-45deg) translate(5px, -5px)' : 'none';
         });
     }
 
-    // Close menu when link clicked
-    document.querySelectorAll('.main-nav a').forEach(link => {
-        link.addEventListener('click', () => {
-            nav.classList.remove('active');
-            const spans = menuBtn.querySelectorAll('span');
-            spans.forEach(s => s.style.transform = 'none');
-            spans[1].style.opacity = '1';
-        });
-    });
+    // --- Typing Effect for Hero Section ---
+    const textToType = "Bienvenue_à_l'IUT_Sénart_Fontainebleau";
+    const typingElement = document.getElementById('typing-text');
+    let charIndex = 0;
 
-    // Header Scroll Effect
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
+    function typeWriter() {
+        if (charIndex < textToType.length) {
+            typingElement.textContent += textToType.charAt(charIndex);
+            charIndex++;
+            setTimeout(typeWriter, 100); // Speed of typing
         }
-    });
+    }
 
-    // Intersection Observer for Scroll Animations
-    const observerOptions = {
-        threshold: 0.15,
-        rootMargin: "0px 0px -50px 0px"
-    };
+    // Start typing after a short delay
+    setTimeout(typeWriter, 500);
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                observer.unobserve(entry.target); // Only animate once
-            }
-        });
-    }, observerOptions);
-
-    document.querySelectorAll('.reveal-on-scroll').forEach(el => {
-        observer.observe(el);
-    });
-
-    // Smooth Scroll for Anchors (Polyfill-like behavior for consistency)
+    // --- Smooth Scrolling for Anchors ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
             const targetElement = document.querySelector(targetId);
+            
             if (targetElement) {
-                const headerOffset = 80;
+                // Close mobile menu if open
+                nav.classList.remove('active');
+
+                const headerOffset = 70;
                 const elementPosition = targetElement.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -69,6 +45,28 @@ document.addEventListener('DOMContentLoaded', () => {
                     top: offsetPosition,
                     behavior: "smooth"
                 });
+            }
+        });
+    });
+
+    // --- Add active state to nav links on scroll ---
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.main-nav a');
+
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (window.scrollY >= (sectionTop - 150)) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active-link');
+            if (link.getAttribute('href').includes(current)) {
+                link.classList.add('active-link');
             }
         });
     });
