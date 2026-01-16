@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IUT Sénart Fontainebleau - v2.0.26</title>
-    <!-- Google Fonts for Coding Aesthetic -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" type="image/svg+xml" href="assets/img/IUT_blanc.svg">
-</head>
-<body>
 
-    <!-- Navbar -->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IUT Sénart Fontainebleau - v2.0.26</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/IUT_blanc.svg" />
+</head>
+
+<body>
     <header id="header">
         <div class="container header-container">
             <a href="#" class="logo">
-                <img src="assets/img/IUT_blanc.svg" alt="IUT Logo">
+                <img src="assets/img/IUT_blanc.svg" alt="IUT Logo" />
             </a>
             <button class="mobile-menu-btn" aria-label="Toggle Terminal">
                 &gt;_
@@ -35,7 +35,6 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
         <section id="hero">
             <div class="terminal-window">
                 <div class="terminal-header">
@@ -53,9 +52,12 @@
                         </div>
                     </div>
                     <div class="hero-subtext">
-                        <span class="const-keyword">const</span> <span class="variable">avenir</span> = <span class="string">"Assuré"</span>;
-                        <br>
-                        <span class="comment">// L'excellence universitaire au service de votre carrière.</span>
+                        <span class="const-keyword">const</span>
+                        <span class="variable">avenir</span> =
+                        <span class="string">"Assuré"</span>;
+                        <br />
+                        <span class="comment">// L'excellence universitaire au service de votre
+                            carrière.</span>
                     </div>
                     <div class="cta-container">
                         <a href="#formations" class="btn-code">./start_career.sh</a>
@@ -64,7 +66,6 @@
             </div>
         </section>
 
-        <!-- Presentation Section -->
         <section id="presentation" class="section">
             <div class="container">
                 <div class="section-title">
@@ -74,7 +75,11 @@
                     <div class="text-content">
                         <p class="comment">/* À propos de l'établissement */</p>
                         <p>
-                            Implanté sur deux sites géographiques, <span class="key">Sénart</span> et <span class="key">Fontainebleau</span>, l'IUT offre un cadre d'études privilégié. Composante de l'UPEC, nous allions exigence universitaire et professionnalisation.
+                            Implanté sur deux sites géographiques,
+                            <span class="key">Sénart</span> et
+                            <span class="key">Fontainebleau</span>, l'IUT offre un cadre
+                            d'études privilégié. Composante de l'UPEC, nous allions exigence
+                            universitaire et professionnalisation.
                         </p>
                         <div class="stats-container">
                             <div class="stat-box">
@@ -91,34 +96,42 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Code Block Visualization -->
+
                     <div class="code-block-display">
-                        <span class="code-line"><span class="key">university</span>: <span class="string">"UPEC"</span>,</span>
-                        <span class="code-line"><span class="key">locations</span>: [<span class="string">"Lieusaint"</span>, <span class="string">"Fontainebleau"</span>],</span>
-                        <span class="code-line"><span class="key">type</span>: <span class="string">"Technology_Institute"</span>,</span>
-                        <span class="code-line"><span class="key">focus</span>: [<span class="string">"Practice"</span>, <span class="string">"Theory"</span>],</span>
-                        <span class="code-line"><span class="key">isHiring</span>: <span class="value">true</span></span>
+                        <span class="code-line"><span class="key">university</span>:
+                            <span class="string">"UPEC"</span>,</span>
+                        <span class="code-line"><span class="key">locations</span>: [<span
+                                class="string">"Lieusaint"</span>, <span class="string">"Fontainebleau"</span>],</span>
+                        <span class="code-line"><span class="key">type</span>:
+                            <span class="string">"Technology_Institute"</span>,</span>
+                        <span class="code-line"><span class="key">focus</span>: [<span class="string">"Practice"</span>,
+                            <span class="string">"Theory"</span>],</span>
+                        <span class="code-line"><span class="key">isHiring</span>:
+                            <span class="value">true</span></span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Formations Section -->
         <section id="formations" class="section">
             <div class="container">
                 <div class="section-title">
                     <h2>Formations_BUT</h2>
                 </div>
-                <p class="comment" style="margin-bottom: 30px;">// Bachelor Universitaire de Technologie (3 ans)</p>
+                <p class="comment" style="margin-bottom: 30px">
+                    // Bachelor Universitaire de Technologie (3 ans)
+                </p>
                 <div class="cards-grid">
-                    <!-- Cards using data fetched from UPEC site -->
                     <article class="file-card">
                         <div class="file-header">
                             <span class="file-name">Info.js</span>
                             <span class="file-ext">BUT</span>
                         </div>
                         <h3>Informatique</h3>
-                        <p class="file-desc">Développement d'applications, administration de bases de données, cybersécurité.</p>
+                        <p class="file-desc">
+                            Développement d'applications, administration de bases de
+                            données, cybersécurité.
+                        </p>
                         <a href="#" class="btn-sm">view_details()</a>
                     </article>
 
@@ -128,7 +141,10 @@
                             <span class="file-ext">BUT</span>
                         </div>
                         <h3>MMI</h3>
-                        <p class="file-desc">Métiers du Multimédia et de l'Internet : Web, Design, Communication digitale.</p>
+                        <p class="file-desc">
+                            Métiers du Multimédia et de l'Internet : Web, Design,
+                            Communication digitale.
+                        </p>
                         <a href="#" class="btn-sm">view_details()</a>
                     </article>
 
@@ -138,7 +154,10 @@
                             <span class="file-ext">BUT</span>
                         </div>
                         <h3>GEII</h3>
-                        <p class="file-desc">Génie Électrique et Info Industrielle : Automatisme, Électronique, Énergie.</p>
+                        <p class="file-desc">
+                            Génie Électrique et Info Industrielle : Automatisme,
+                            Électronique, Énergie.
+                        </p>
                         <a href="#" class="btn-sm">view_details()</a>
                     </article>
 
@@ -148,7 +167,9 @@
                             <span class="file-ext">BUT</span>
                         </div>
                         <h3>TC</h3>
-                        <p class="file-desc">Techniques de Commercialisation : Marketing, Vente, Négociation.</p>
+                        <p class="file-desc">
+                            Techniques de Commercialisation : Marketing, Vente, Négociation.
+                        </p>
                         <a href="#" class="btn-sm">view_details()</a>
                     </article>
 
@@ -158,7 +179,9 @@
                             <span class="file-ext">BUT</span>
                         </div>
                         <h3>GCCD</h3>
-                        <p class="file-desc">Génie Civil - Construction Durable : Bâtiment, Travaux Publics.</p>
+                        <p class="file-desc">
+                            Génie Civil - Construction Durable : Bâtiment, Travaux Publics.
+                        </p>
                         <a href="#" class="btn-sm">view_details()</a>
                     </article>
 
@@ -168,14 +191,16 @@
                             <span class="file-ext">BUT</span>
                         </div>
                         <h3>GEA</h3>
-                        <p class="file-desc">Gestion des Entreprises et Administrations : Compta, RH, Gestion.</p>
+                        <p class="file-desc">
+                            Gestion des Entreprises et Administrations : Compta, RH,
+                            Gestion.
+                        </p>
                         <a href="#" class="btn-sm">view_details()</a>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- Admissions Timeline (Git Graph) -->
         <section id="admissions" class="section">
             <div class="container">
                 <div class="section-title">
@@ -203,59 +228,67 @@
                         <div class="commit-date">Juin 2026</div>
                     </div>
                 </div>
-                <div style="margin-top: 20px;">
-                    <a href="https://www.parcoursup.fr/" target="_blank" class="parcoursup-btn">git push origin parcoursup --force</a>
+                <div style="margin-top: 20px">
+                    <a href="https://www.parcoursup.fr/" target="_blank" class="parcoursup-btn">git push origin
+                        parcoursup --force</a>
                 </div>
             </div>
         </section>
 
-        <!-- Actualités (Logs) -->
         <section id="actualites" class="section">
             <div class="container">
                 <div class="section-title">
                     <h2>System_Logs</h2>
                 </div>
                 <div class="logs-container">
-                    <!-- News 1 -->
                     <div class="log-entry">
                         <div class="log-meta">
                             <span class="timestamp">[2026-01-15T09:00:00]</span>
                             <span class="log-level">INFO</span>
                         </div>
-                        <div class="log-message">Informations utiles pour bien préparer sa rentrée universitaire.</div>
+                        <div class="log-message">
+                            Informations utiles pour bien préparer sa rentrée universitaire.
+                        </div>
                         <a href="#" class="log-link">>> Read more</a>
                     </div>
-                    <!-- News 2 -->
+
                     <div class="log-entry">
                         <div class="log-meta">
                             <span class="timestamp">[2026-01-12T14:30:00]</span>
                             <span class="log-level">WARN</span>
                         </div>
-                        <div class="log-message">Amélioration continue de la formation : appel à collaboration avec les entreprises.</div>
+                        <div class="log-message">
+                            Amélioration continue de la formation : appel à collaboration
+                            avec les entreprises.
+                        </div>
                         <a href="#" class="log-link">>> Read more</a>
                     </div>
-                    <!-- News 3 -->
+
                     <div class="log-entry">
                         <div class="log-meta">
                             <span class="timestamp">[2026-01-10T11:15:00]</span>
                             <span class="log-level">SUCCESS</span>
                         </div>
-                        <div class="log-message">Invitation culinaire : Journées du goût sur les campus. Venez participer !</div>
+                        <div class="log-message">
+                            Invitation culinaire : Journées du goût sur les campus. Venez
+                            participer !
+                        </div>
                         <a href="#" class="log-link">>> Read more</a>
                     </div>
-                    <!-- Static logs for aesthetic -->
+
                     <div class="log-entry">
                         <div class="log-meta">
                             <span class="timestamp">[SYSTEM]</span>
                             <span class="log-level">DEBUG</span>
                         </div>
-                        <div class="log-message">Server uptime: 99.9%. Student satisfaction index loading...</div>
+                        <div class="log-message">
+                            Server uptime: 99.9%. Student satisfaction index loading...
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact" class="section">
             <div class="container">
                 <div class="section-title">
@@ -264,18 +297,31 @@
                 <div class="contact-container">
                     <div class="contact-info">
                         <p class="comment">// Endpoints de communication</p>
-                        <br>
-                        <p><span class="key">const</span> address_senart = <span class="string">"36-37 rue Georges Charpak, 77567 Lieusaint"</span>;</p>
-                        <p><span class="key">const</span> address_fontainebleau = <span class="string">"Route Hurtault, 77300 Fontainebleau"</span>;</p>
-                        <p><span class="key">const</span> email = <span class="string">"contact@iutsf.org"</span>;</p>
-                        <p><span class="key">const</span> phone = <span class="string">"01 64 13 44 88"</span>;</p>
+                        <br />
+                        <p>
+                            <span class="key">const</span> address_senart =
+                            <span class="string">"36-37 rue Georges Charpak, 77567 Lieusaint"</span>;
+                        </p>
+                        <p>
+                            <span class="key">const</span> address_fontainebleau =
+                            <span class="string">"Route Hurtault, 77300 Fontainebleau"</span>;
+                        </p>
+                        <p>
+                            <span class="key">const</span> email =
+                            <span class="string">"contact@iutsf.org"</span>;
+                        </p>
+                        <p>
+                            <span class="key">const</span> phone =
+                            <span class="string">"01 64 13 44 88"</span>;
+                        </p>
                     </div>
-                    <form class="contact-form" onsubmit="event.preventDefault(); alert('Request sent with status 200 OK');">
+                    <form class="contact-form"
+                        onsubmit="event.preventDefault(); alert('Request sent with status 200 OK');">
                         <div class="form-group">
-                            <input type="text" placeholder="input.name" required>
+                            <input type="text" placeholder="input.name" required />
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="input.email" required>
+                            <input type="email" placeholder="input.email" required />
                         </div>
                         <div class="form-group">
                             <textarea placeholder="console.log(your_message);" rows="5" required></textarea>
@@ -296,4 +342,5 @@
 
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
