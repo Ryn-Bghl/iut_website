@@ -10,17 +10,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const textToType = "Bienvenue_à_l'IUT_Sénart_Fontainebleau";
   const typingElement = document.getElementById("typing-text");
-  let charIndex = 0;
+  
+  if (typingElement) {
+      let charIndex = 0;
 
-  function typeWriter() {
-    if (charIndex < textToType.length) {
-      typingElement.textContent += textToType.charAt(charIndex);
-      charIndex++;
-      setTimeout(typeWriter, 100);
-    }
+      function typeWriter() {
+        if (charIndex < textToType.length) {
+          typingElement.textContent += textToType.charAt(charIndex);
+          charIndex++;
+          setTimeout(typeWriter, 100);
+        }
+      }
+
+      setTimeout(typeWriter, 500);
   }
-
-  setTimeout(typeWriter, 500);
 
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {

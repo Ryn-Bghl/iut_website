@@ -138,9 +138,9 @@ ul {
     align-items: center;
     justify-content: center;
     position: relative;
-    background-image: linear-gradient(rgba(13, 17, 23, 0.9),
+    /* background-image: linear-gradient(rgba(13, 17, 23, 0.9),
             rgba(13, 17, 23, 0.95)),
-        url("https://source.unsplash.com/random/1920x1080/?code,programming");
+        url("https://source.unsplash.com/random/1920x1080/?code,programming"); */
 
     background-size: cover;
     background-position: center;
