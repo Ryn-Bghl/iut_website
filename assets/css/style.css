@@ -175,6 +175,8 @@ ul {
     box-shadow: var(--card-shadow);
     z-index: 3;
     overflow: hidden;
+
+    animation: matrix-reveal 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 .terminal-header {
@@ -409,9 +411,10 @@ ul {
 }
 
 .file-card:hover {
-    transform: translateY(-5px);
+    transform: matrix(1.05, 0, 0, 1.05, 0, -10);
     border-color: var(--accent-blue);
     box-shadow: var(--glow);
+    z-index: 10;
 }
 
 .file-header {
@@ -756,5 +759,20 @@ footer {
     .main-nav ul {
         flex-direction: column;
         gap: 15px;
+    }
+}
+
+
+@keyframes matrix-reveal {
+    0% {
+        opacity: 0;
+        transform: matrix(0, 0, 0, 0, 0, 0);
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: matrix(1, 0, 0, 1, 0, 0);
+
     }
 }
